@@ -1,0 +1,25 @@
+{
+  "name": "test-driven-development-calc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "calculator.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyoon-tcs/test-driven-development-calc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lyoon-tcs/test-driven-development-calc/issues"
+  },
+  "homepage": "https://github.com/lyoon-tcs/test-driven-development-calc#readme",
+  "devDependencies": {
+    "jest": "^27.4.7"
+  }
+}
