@@ -1,5 +1,8 @@
-const multiply = require('../calculator');
+// sum, multiply
+const functions = require('../calculator');
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(multiply(2, 5)).toBe(10);
+describe('sum()', () => {
+  test('adds 2 numbers and returns sum', () => {
+    expect(functions.sum(5, 15)).toBe(20);
+  });
 });
