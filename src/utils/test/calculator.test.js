@@ -1,31 +1,36 @@
+class Calculator {
+  constructor() {}
+
+  getSum(a, b) {
+    return a + b;
+  }
+
+  getDifference(a, b) {
+    return a + b;
+  }
+}
+
 describe('Calculator', () => {
   let calc;
 
   beforeEach(() => {
-    calc = {
-      sum: function (a, b) {
-        return a + b;
-      },
-      difference: function (a, b) {
-        return a - b;
-      },
-    };
+    calc = new Calculator();
   });
   // addition
   test('adds 2 numbers, then returns the sum', () => {
     const num1 = 4;
     const num2 = 6;
     const expected = num1 + num2;
-    expect(calc.sum(num1, num2)).toBe(expected);
+    expect(calc.getSum(num1, num2)).toBe(expected);
   });
-  // test('should only add first two operands and returns sum, ignores the rest', () => {});
-  // test('should return operand as sum only if one argument is passed', () => {});
-  // test('should return 0 if no operands are passed', () => {});
-  // test('should throw error if type is not number', () => {});
-  // // subtraction
-  // test('should subtract two numbers and return difference', () => {});
-  // test('should only subtract first two operands and returns difference, ignores the rest', () => {});
-  // test('should return operand as difference only if one argument is passed', () => {});
-  // test('should return 0 if no operands are passed', () => {});
-  // test('should throw error if type is not number', () => {});
+  test('should only add first two operands and returns sum, ignores the rest', () => {});
+  test('should return operand as sum only if one argument is passed', () => {});
+  test('should return 0 if no operands are passed', () => {});
+  test('should throw error if type is not number', () => {});
+  // subtraction
+  test('should subtract two numbers and return difference', () => {});
+  test('should only subtract first two operands and returns difference, ignores the rest', () => {});
+  test('should return operand as difference only if one argument is passed', () => {});
+  test('should return 0 if no operands are passed', () => {});
+  test('should throw error if type is not number', () => {});
 });
