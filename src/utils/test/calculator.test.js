@@ -1,4 +1,16 @@
 describe('Calculator', () => {
+  let calc;
+
+  beforeEach(() => {
+    calc = {
+      sum: function (a, b) {
+        return a + b;
+      },
+      difference: function (a, b) {
+        return a - b;
+      },
+    };
+  });
   // addition
   test('adds 2 numbers, then returns the sum', () => {});
   test('should only add first two operands and returns sum, ignores the rest', () => {});
