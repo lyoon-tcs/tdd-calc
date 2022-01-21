@@ -1,5 +1,13 @@
-const add = (a, b) => {
-  return a + b;
-};
+class Calculator {
+  constructor() {}
 
-console.log(add(3));
+  getSum(a, b) {
+    return a + b;
+  }
+
+  getDifference(a, b) {
+    return a - b;
+  }
+}
+
+module.exports = Calculator;
