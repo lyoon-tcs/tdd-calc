@@ -1,20 +1,10 @@
-class Calculator {
-  constructor() {}
-
-  getSum(a, b) {
-    return a + b;
-  }
-
-  getDifference(a, b) {
-    return a - b;
-  }
-}
+const calculator = require('../calculator');
 
 describe('Calculator', () => {
   let calc;
 
   beforeEach(() => {
-    calc = new Calculator();
+    calc = new calculator();
   });
   // addition
   test('adds 2 numbers, then returns the sum', () => {
