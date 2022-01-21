@@ -2,25 +2,19 @@ class Calculator {
   constructor() {}
 
   getSum(a, b) {
+    // if a && b is blank
     if (a === undefined && b === undefined) {
       return 0;
+      // ONLY if no b (2nd arg)
     } else if (b === undefined) {
       return a;
-    } else if (typeof a !== 'number' || typeof b !== 'number') {
-      return 'Please use only numbers';
-    } else {
-      return a + b;
     }
-
-    // if (typeof a !== 'number' && typeof b !== 'number') {
-    //   return 'Please use only numbers';
-    // } else if (a === undefined && b === undefined) {
-    //   return 0;
-    // } else if (b === undefined) {
-    //   return a;
-    // } else {
-    //   return a + b;
-    // }
+    // a || b type !== number
+    if (typeof a !== 'number' || typeof b !== 'number') {
+      return 'Please use only numbers';
+    }
+    // proper args passed
+    return a + b;
   }
 
   getDifference(a, b) {
