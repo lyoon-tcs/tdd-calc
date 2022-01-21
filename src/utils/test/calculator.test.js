@@ -2,33 +2,27 @@ const calculator = require('../calculator');
 
 describe('Calculator', () => {
   let calc;
+  const num1 = 4;
+  const num2 = 6;
+  const num3 = 8;
+  const firstTwoSum = num1 + num2;
 
   beforeEach(() => {
     calc = new calculator();
   });
   // addition
   test('adds 2 numbers, then returns the sum', () => {
-    const num1 = 4;
-    const num2 = 6;
-    const expected = num1 + num2;
-    expect(calc.getSum(num1, num2)).toBe(expected);
+    expect(calc.getSum(num1, num2)).toBe(firstTwoSum);
   });
   test('should only add first two operands and returns sum, ignores the rest', () => {
-    const num1 = 4;
-    const num2 = 6;
-    const num3 = 2;
-    const expected = num1 + num2;
-    expect(calc.getSum(num1, num2, num3)).toBe(expected);
+    expect(calc.getSum(num1, num2, num3)).toBe(firstTwoSum);
   });
   test('should return operand as sum only if one argument is passed', () => {
-    const num1 = 4;
     expect(calc.getSum(num1)).toBe(num1);
   });
   test('should return 0 if no operands are passed', () => {
     expect(calc.getSum()).toBe(0);
   });
-  test.todo('should throw error if type is not number');
-
   test('should say error message if type is not a number', () => {
     const errorMessage = 'Please use only numbers';
     expect(calc.getSum(1, 'foo')).toBe(errorMessage);
