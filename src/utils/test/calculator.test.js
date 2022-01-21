@@ -10,33 +10,36 @@ describe('Calculator', () => {
   beforeEach(() => {
     calc = new calculator();
   });
-  // addition
-  test('adds 2 numbers, then returns the sum', () => {
-    expect(calc.getSum(num1, num2)).toBe(firstTwoSum);
-  });
-  test('should only add first two operands and returns sum, ignores the rest', () => {
-    expect(calc.getSum(num1, num2, num3)).toBe(firstTwoSum);
-  });
-  test('should return operand as sum only if one argument is passed', () => {
-    expect(calc.getSum(num1)).toBe(num1);
-  });
-  test('should return 0 if no operands are passed', () => {
-    expect(calc.getSum()).toBe(0);
-  });
-  test('should say error message if type is not a number', () => {
-    const errorMessage = 'Please use only numbers';
-    expect(calc.getSum(1, 'foo')).toBe(errorMessage);
-    expect(calc.getSum('foo', 1)).toBe(errorMessage);
+
+  describe('Add:', () => {
+    test('adds 2 numbers, then returns the sum', () => {
+      expect(calc.getSum(num1, num2)).toBe(firstTwoSum);
+    });
+    test('should only add first two operands and returns sum, ignores the rest', () => {
+      expect(calc.getSum(num1, num2, num3)).toBe(firstTwoSum);
+    });
+    test('should return operand as sum only if one argument is passed', () => {
+      expect(calc.getSum(num1)).toBe(num1);
+    });
+    test('should return 0 if no operands are passed', () => {
+      expect(calc.getSum()).toBe(0);
+    });
+    test('should say error message if type is not a number', () => {
+      const errorMessage = 'Please use only numbers';
+      expect(calc.getSum(1, 'foo')).toBe(errorMessage);
+      expect(calc.getSum('foo', 1)).toBe(errorMessage);
+    });
   });
 
-  // subtraction
-  test.todo('should subtract two numbers and return difference');
-  test.todo(
-    'should only subtract first two operands and returns difference, ignores the rest'
-  );
-  test.todo(
-    'should return operand as difference only if one argument is passed'
-  );
-  test.todo('should return 0 if no operands are passed');
-  test.todo('should throw error if type is not number');
+  describe('Subtraction:', () => {
+    test.todo('should subtract two numbers and return difference');
+    test.todo(
+      'should only subtract first two operands and returns difference, ignores the rest'
+    );
+    test.todo(
+      'should return operand as difference only if one argument is passed'
+    );
+    test.todo('should return 0 if no operands are passed');
+    test.todo('should throw error if type is not number');
+  });
 });
