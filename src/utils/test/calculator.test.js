@@ -6,7 +6,7 @@ class Calculator {
   }
 
   getDifference(a, b) {
-    return a + b;
+    return a - b;
   }
 }
 
