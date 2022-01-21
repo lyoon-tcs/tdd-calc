@@ -23,9 +23,13 @@ describe('Calculator', () => {
     const expected = num1 + num2;
     expect(calc.getSum(num1, num2)).toBe(expected);
   });
-  test.todo(
-    'should only add first two operands and returns sum, ignores the rest'
-  );
+  test('should only add first two operands and returns sum, ignores the rest', () => {
+    const num1 = 4;
+    const num2 = 6;
+    const num3 = 2;
+    const expected = num1 + num2;
+    expect(calc.getSum(num1, num2, num3)).toBe(expected);
+  });
   test.todo('should return operand as sum only if one argument is passed');
   test.todo('should return 0 if no operands are passed');
   test.todo('should throw error if type is not number');
