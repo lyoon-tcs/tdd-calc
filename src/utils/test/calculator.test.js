@@ -2,10 +2,12 @@ const calculator = require('../calculator');
 
 describe('Calculator', () => {
   let calc;
-  const num1 = 4;
+  const num1 = 8;
   const num2 = 6;
-  const num3 = 8;
+  const num3 = 4;
   const firstTwoSum = num1 + num2;
+  const firstTwoDiff = num1 - num2;
+  const errorMessage = 'Please use only numbers';
 
   beforeEach(() => {
     calc = new calculator();
@@ -25,21 +27,27 @@ describe('Calculator', () => {
       expect(calc.getSum()).toBe(0);
     });
     test('should say error message if type is not a number', () => {
-      const errorMessage = 'Please use only numbers';
       expect(calc.getSum(1, 'foo')).toBe(errorMessage);
       expect(calc.getSum('foo', 1)).toBe(errorMessage);
     });
   });
 
   describe('Subtraction:', () => {
-    test.todo('should subtract two numbers and return difference');
-    test.todo(
-      'should only subtract first two operands and returns difference, ignores the rest'
-    );
-    test.todo(
-      'should return operand as difference only if one argument is passed'
-    );
-    test.todo('should return 0 if no operands are passed');
-    test.todo('should throw error if type is not number');
+    test('should subtract two numbers and return difference', () => {
+      expect(calc.getDifference(num1, num2)).toBe(firstTwoDiff);
+    });
+    test('should only subtract first two operands and returns difference, ignores the rest', () => {
+      expect(calc.getDifference(num1, num2, num3)).toBe(firstTwoDiff);
+    });
+    test('should return operand as difference only if one argument is passed', () => {
+      expect(calc.getDifference(num1)).toBe(num1);
+    });
+    test('should return 0 if no operands are passed', () => {
+      expect(calc.getDifference()).toBe(0);
+    });
+    test('should throw error if type is not number', () => {
+      expect(calc.getDifference(1, 'foo')).toBe(errorMessage);
+      expect(calc.getDifference('foo', 1)).toBe(errorMessage);
+    });
   });
 });
