@@ -7,6 +7,12 @@
  * use it only in accordance with the terms of the license agreement you entered into with the company.
  */
 
+/**
+ * Calculator class has 4 basic operations: add, subtract, multiply, divide.
+ * @author Lawrence Yoon
+ * @date 01-20-2022
+ * @outstanding implement multiply & divide methods
+ */
 class Calculator {
   constructor() {
     this.errorMessage = "Please use only numbers";
