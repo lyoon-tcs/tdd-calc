@@ -76,11 +76,18 @@ describe('Calculator', () => {
     test('should divide two numbers and return value', () => {
       expect(calc.getDivision(6, 3)).toBe(2);
     });
-    test.todo(
-      'should only divide first two operands and returns value, ignores the rest'
-    );
-    test.todo('should return operand as value only if one argument is passed');
-    test.todo('should return 0 if no operands are passed');
-    test.todo('should throw error if type is not number');
+    test('should only divide first two operands and returns value, ignores the rest', () => {
+      expect(calc.getDivision(12, 3, 2)).toBe(4);
+    });
+    test('should return operand as value only if one argument is passed', () => {
+      expect(calc.getDivision(2)).toBe(2);
+    });
+    test('should return 0 if no operands are passed', () => {
+      expect(calc.getDivision()).toBe(0);
+    });
+    test('should throw error if type is not number', () => {
+      expect(calc.getDivision(1, 'foo')).toBe(NOT_NUMBER_ERROR);
+      expect(calc.getDivision('foo', 1)).toBe(NOT_NUMBER_ERROR);
+    });
   });
 });
