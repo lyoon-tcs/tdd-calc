@@ -7,14 +7,14 @@
  * use it only in accordance with the terms of the license agreement you entered into with the company.
  */
 
-const calculator = require('../calculator');
+const Calculator = require('../calculator');
 
 describe('Calculator', () => {
   let calc;
   const NOT_NUMBER_ERROR = 'Please use only numbers';
 
   beforeEach(() => {
-    calc = new calculator();
+    calc = new Calculator();
   });
 
   describe('Addition', () => {
