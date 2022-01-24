@@ -15,11 +15,11 @@
  */
 class Calculator {
   constructor() {
-    this.errorMessage = "Please use only numbers";
+    this.errorMessage = 'Please use only numbers';
   }
 
   getSum(a, b) {
-    if (typeof a !== "number" || typeof b !== "number") {
+    if (typeof a !== 'number' || typeof b !== 'number') {
       if (a === undefined && b === undefined) {
         return 0;
       }
@@ -32,7 +32,7 @@ class Calculator {
   }
 
   getDifference(a, b) {
-    if (typeof a !== "number" || typeof b !== "number") {
+    if (typeof a !== 'number' || typeof b !== 'number') {
       if (a === undefined && b === undefined) {
         return 0;
       }
