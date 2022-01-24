@@ -18,8 +18,5 @@
   "bugs": {
     "url": "https://github.com/lyoon-tcs/test-driven-development-calc/issues"
   },
-  "homepage": "https://github.com/lyoon-tcs/test-driven-development-calc#readme",
-  "devDependencies": {
-    "jest": "^27.4.7"
-  }
+  "homepage": "https://github.com/lyoon-tcs/test-driven-development-calc#readme"
 }
