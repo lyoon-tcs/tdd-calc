@@ -28,6 +28,10 @@ class Calculator {
     }
     return a - b;
   }
+
+  getMultiplication(a, b) {
+    return a * b;
+  }
 }
 
 module.exports = Calculator;
