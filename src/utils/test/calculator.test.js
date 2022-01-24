@@ -13,7 +13,7 @@ describe('Calculator', () => {
     calc = new calculator();
   });
 
-  describe('Add:', () => {
+  describe('Addition:', () => {
     test('adds 2 numbers, then returns the sum', () => {
       expect(calc.getSum(num1, num2)).toBe(firstTwoSum);
     });
@@ -49,5 +49,14 @@ describe('Calculator', () => {
       expect(calc.getDifference(1, 'foo')).toBe(errorMessage);
       expect(calc.getDifference('foo', 1)).toBe(errorMessage);
     });
+  });
+  describe('Multiplication:', () => {
+    test.todo('should multiply two numbers and return value');
+    test.todo(
+      'should only multiply first two operands and returns value, ignores the rest'
+    );
+    test.todo('should return operand as value only if one argument is passed');
+    test.todo('should return 0 if no operands are passed');
+    test.todo('should throw error if type is not number');
   });
 });
