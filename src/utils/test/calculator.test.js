@@ -7,6 +7,7 @@ describe('Calculator', () => {
   const num3 = 4;
   const firstTwoSum = num1 + num2;
   const firstTwoDiff = num1 - num2;
+  const firstTwoMultiply = num1 * num2;
   const errorMessage = 'Please use only numbers';
 
   beforeEach(() => {
@@ -51,7 +52,9 @@ describe('Calculator', () => {
     });
   });
   describe('Multiplication:', () => {
-    test.todo('should multiply two numbers and return value');
+    test('should multiply two numbers and return value', () => {
+      expect(calc.getMultiplication(num1, num2)).toBe(firstTwoMultiply);
+    });
     test.todo(
       'should only multiply first two operands and returns value, ignores the rest'
     );
