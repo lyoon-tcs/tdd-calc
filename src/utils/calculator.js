@@ -19,45 +19,36 @@ class Calculator {
   }
 
   // helper functions
+  testChecker(a, b) {
+    if (typeof a !== 'number' || typeof b !== 'number') {
+      if (a === undefined && b === undefined) {
+        return 0;
+      }
+      if (b === undefined) {
+        return a;
+      }
+      return this.errorMessage;
+    }
+    return;
+  }
 
   // operations
   getSum(a, b) {
-    if (typeof a !== 'number' || typeof b !== 'number') {
-      if (a === undefined && b === undefined) {
-        return 0;
-      }
-      if (b === undefined) {
-        return a;
-      }
-      return this.errorMessage;
-    }
-    return a + b;
+    return this.testChecker(a, b) === undefined
+      ? a + b
+      : this.testChecker(a, b);
   }
 
   getDifference(a, b) {
-    if (typeof a !== 'number' || typeof b !== 'number') {
-      if (a === undefined && b === undefined) {
-        return 0;
-      }
-      if (b === undefined) {
-        return a;
-      }
-      return this.errorMessage;
-    }
-    return a - b;
+    return this.testChecker(a, b) === undefined
+      ? a - b
+      : this.testChecker(a, b);
   }
 
   getMultiplication(a, b) {
-    if (typeof a !== 'number' || typeof b !== 'number') {
-      if (a === undefined && b === undefined) {
-        return 0;
-      }
-      if (b === undefined) {
-        return a;
-      }
-      return this.errorMessage;
-    }
-    return a * b;
+    return this.testChecker(a, b) === undefined
+      ? a * b
+      : this.testChecker(a, b);
   }
 }
 
