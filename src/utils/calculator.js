@@ -50,6 +50,12 @@ class Calculator {
       ? a * b
       : this.testChecker(a, b);
   }
+
+  getDivision(a, b) {
+    return this.testChecker(a, b) === undefined
+      ? a / b
+      : this.testChecker(a, b);
+  }
 }
 
 module.exports = Calculator;
