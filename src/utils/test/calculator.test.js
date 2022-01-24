@@ -55,11 +55,18 @@ describe('Calculator', () => {
     test('should multiply two numbers and return value', () => {
       expect(calc.getMultiplication(num1, num2)).toBe(firstTwoMultiply);
     });
-    test.todo(
-      'should only multiply first two operands and returns value, ignores the rest'
-    );
-    test.todo('should return operand as value only if one argument is passed');
-    test.todo('should return 0 if no operands are passed');
-    test.todo('should throw error if type is not number');
+    test('should only multiply first two operands and returns value, ignores the rest', () => {
+      expect(calc.getMultiplication(num1, num2)).toBe(firstTwoMultiply);
+    });
+    test('should return operand as value only if one argument is passed', () => {
+      expect(calc.getMultiplication(num1)).toBe(num1);
+    });
+    test('should return 0 if no operands are passed', () => {
+      expect(calc.getMultiplication()).toBe(0);
+    });
+    test('should throw error if type is not number', () => {
+      expect(calc.getMultiplication(1, 'foo')).toBe(errorMessage);
+      expect(calc.getMultiplication('foo', 1)).toBe(errorMessage);
+    });
   });
 });
