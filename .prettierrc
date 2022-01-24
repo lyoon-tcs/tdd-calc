@@ -6,13 +6,5 @@
   "useTabs": false,
   "quoteProps": "preserve",
   "jsxSingleQuote": false,
-  "arrowParens": "always",
-  "overrides": [
-    {
-      "files": "*.test.js",
-      "options": {
-        "singleQuote": false
-      }
-    }
-  ]
+  "arrowParens": "always"
 }
