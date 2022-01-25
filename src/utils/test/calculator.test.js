@@ -31,8 +31,12 @@ describe('Calculator', () => {
       expect(calc.getSum()).toBe(0);
     });
     test('should say error message if type is not a number', () => {
-      expect(calc.getSum(1, 'foo')).toBe(NOT_NUMBER_ERROR);
-      expect(calc.getSum('foo', 1)).toBe(NOT_NUMBER_ERROR);
+      expect(() => {
+        calc.getSum(1, 'foo');
+      }).toThrow();
+      expect(() => {
+        calc.getSum('foo', 1);
+      }).toThrow();
     });
   });
 

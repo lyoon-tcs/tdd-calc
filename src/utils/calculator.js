@@ -14,10 +14,6 @@
  * @outstanding implement multiply & divide methods
  */
 class Calculator {
-  constructor() {
-    this.errorMessage = 'Please use only numbers';
-  }
-
   // helper functions
   testChecker(a, b) {
     if (typeof a !== 'number' || typeof b !== 'number') {
@@ -27,12 +23,16 @@ class Calculator {
       if (b === undefined) {
         return a;
       }
-      return this.errorMessage;
+      throw Error('Only numbers are allowed!');
     }
-    return undefined;
   }
 
-  // operations
+  /**
+   * @description Sum of two numbers.
+   * @param {number} a - first number to add.
+   * @param {number} b - second number to add.
+   * @returns {number} sum of a + b.
+   */
   getSum(a, b) {
     return this.testChecker(a, b) === undefined
       ? a + b
@@ -57,5 +57,9 @@ class Calculator {
       : this.testChecker(a, b);
   }
 }
+
+const calc = new Calculator();
+
+console.log(calc.getSum(2, 1));
 
 module.exports = Calculator;
