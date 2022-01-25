@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "jest",
-    "lint": "eslint . --ext .js"
+    "lint": "eslint .",
+    "lint:fix": "npx eslint --fix"
   },
   "repository": {
     "type": "git",
