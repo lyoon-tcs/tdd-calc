@@ -57,8 +57,8 @@ class Calculator {
 
   /**
    * @description checks jest tests using helper functions above
-   * @param {any type} a - can be any value
-   * @param {any type} b - can be any value
+   * @param {*} a - can be any value
+   * @param {*} b - can be any value
    * @returns {number, boolean} - a number or boolean (true)
    */
   validate(a, b) {
