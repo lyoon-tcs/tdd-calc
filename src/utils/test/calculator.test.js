@@ -11,7 +11,6 @@ const Calculator = require('../calculator');
 
 describe('Calculator', () => {
   let calc;
-  const NOT_NUMBER_ERROR = 'Please use only numbers';
 
   beforeEach(() => {
     calc = new Calculator();
@@ -54,10 +53,15 @@ describe('Calculator', () => {
       expect(calc.getDifference()).toBe(0);
     });
     test('should throw error if type is not number', () => {
-      expect(calc.getDifference(1, 'foo')).toBe(NOT_NUMBER_ERROR);
-      expect(calc.getDifference('foo', 1)).toBe(NOT_NUMBER_ERROR);
+      expect(() => {
+        calc.getSubtraction(1, 'foo');
+      }).toThrow();
+      expect(() => {
+        calc.getSubtraction('foo', 1);
+      }).toThrow();
     });
   });
+
   describe('Multiplication:', () => {
     test('should multiply two numbers and return value', () => {
       expect(calc.getMultiplication(2, 3)).toBe(6);
@@ -72,10 +76,15 @@ describe('Calculator', () => {
       expect(calc.getMultiplication()).toBe(0);
     });
     test('should throw error if type is not number', () => {
-      expect(calc.getMultiplication(1, 'foo')).toBe(NOT_NUMBER_ERROR);
-      expect(calc.getMultiplication('foo', 1)).toBe(NOT_NUMBER_ERROR);
+      expect(() => {
+        calc.getMultiplication(1, 'foo');
+      }).toThrow();
+      expect(() => {
+        calc.getMultiplication('foo', 1);
+      }).toThrow();
     });
   });
+
   describe('Division:', () => {
     test('should divide two numbers and return value', () => {
       expect(calc.getDivision(6, 3)).toBe(2);
@@ -90,8 +99,12 @@ describe('Calculator', () => {
       expect(calc.getDivision()).toBe(0);
     });
     test('should throw error if type is not number', () => {
-      expect(calc.getDivision(1, 'foo')).toBe(NOT_NUMBER_ERROR);
-      expect(calc.getDivision('foo', 1)).toBe(NOT_NUMBER_ERROR);
+      expect(() => {
+        calc.getDivision(1, 'foo');
+      }).toThrow();
+      expect(() => {
+        calc.getDivision('foo', 1);
+      }).toThrow();
     });
   });
 });
