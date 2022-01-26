@@ -58,8 +58,4 @@ class Calculator {
   }
 }
 
-const calc = new Calculator();
-
-console.log(calc.getSum(2, 1));
-
 module.exports = Calculator;
