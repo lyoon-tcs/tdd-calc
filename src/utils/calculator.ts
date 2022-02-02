@@ -78,7 +78,7 @@ class Calculator {
    * @param {number} b - second number to add.
    * @returns {number} sum of a and b.
    */
-  getSum(a, b) {
+  getSum(a: number, b: number): number {
     return this.validate(a, b) !== true ? this.validate(a, b) : a + b;
   }
 
@@ -88,7 +88,7 @@ class Calculator {
    * @param {number} b - second number to subtract.
    * @returns {number} difference of a and b.
    */
-  getDifference(a, b) {
+  getDifference(a: number, b: number): number {
     return this.validate(a, b) !== true ? this.validate(a, b) : a - b;
   }
 
@@ -98,7 +98,7 @@ class Calculator {
    * @param {number} b - second number to multiply.
    * @returns {number} multiplication of a and b.
    */
-  getMultiplication(a, b) {
+  getMultiplication(a: number, b: number): number {
     return this.validate(a, b) !== true ? this.validate(a, b) : a * b;
   }
 
@@ -108,7 +108,7 @@ class Calculator {
    * @param {number} b - denominator.
    * @returns {number} a divided by b.
    */
-  getDivision(a, b) {
+  getDivision(a: number, b: number): number {
     return this.validate(a, b) !== true ? this.validate(a, b) : a / b;
   }
 }
