@@ -7,6 +7,7 @@
  * use it only in accordance with the terms of the license agreement you entered into with the company.
  */
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const Calculator = require('../calculator');
 
 describe('Calculator', () => {
