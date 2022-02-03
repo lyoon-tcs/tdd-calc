@@ -20,6 +20,11 @@ class Calculator {
    * @param {*} b - can be any value
    * @returns {number} a (any number), b (any number), 0, or doesn't return anything
    */
+  getSum(a: number, b: number): number;
+  getSum(a: undefined, b: number): number;
+  getSum(a: number, b: undefined): number;
+  getSum(a?: number, b?: number): number;
+  getSum(a: undefined, b: undefined): number;
   getSum(a?: number, b?: number): number {
     if (a !== undefined && b !== undefined) {
       return a + b;
@@ -31,6 +36,17 @@ class Calculator {
       return 0;
     }
   }
+  //   getSum(a?: number, b?: number): number {
+  //     if (a !== undefined && b !== undefined) {
+  //       return a + b;
+  //     } else if (a === undefined && b) {
+  //       return b;
+  //     } else if (b === undefined && a) {
+  //       return a;
+  //     } else {
+  //       return 0;
+  //     }
+  //   }
 }
 
 export default Calculator;
