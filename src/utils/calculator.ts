@@ -53,6 +53,24 @@ class Calculator {
   //     return 0;
   //   }
   // }
+
+  getDifference(a: number, b: number): number;
+  getDifference(a: number, b: number, ...m: number[]): number;
+  getDifference(a: undefined, b: number): number;
+  getDifference(a: number, b: undefined): number;
+  getDifference(a?: number, b?: number): number;
+  getDifference(a: undefined, b: undefined): number;
+  getDifference(a?: number, b?: number): number {
+    if (a && b) {
+      return a - b;
+    } else if (a === undefined && b) {
+      return b;
+    } else if (b === undefined && a) {
+      return a;
+    } else {
+      return 0;
+    }
+  }
 }
 
 export default Calculator;
