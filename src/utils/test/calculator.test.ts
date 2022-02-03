@@ -8,7 +8,6 @@
  */
 
 import Calculator from '../calculator';
-// const Calculator = require('../src/utils/calculator');
 
 describe('Calculator', () => {
   let calc: Calculator;
