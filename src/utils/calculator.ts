@@ -77,6 +77,42 @@ class Calculator {
       return 0;
     }
   }
+
+  getMultiplication(a: number, b: number): number;
+  getMultiplication(a: number, b: number, ...m: number[]): number;
+  getMultiplication(a: undefined, b: number): number;
+  getMultiplication(a: number, b: undefined): number;
+  getMultiplication(a?: number, b?: number): number;
+  getMultiplication(a: undefined, b: undefined): number;
+  getMultiplication(a?: number, b?: number): number {
+    if (a && b) {
+      return a * b;
+    } else if (a === undefined && b) {
+      return b;
+    } else if (b === undefined && a) {
+      return a;
+    } else {
+      return 0;
+    }
+  }
+
+  getDivision(a: number, b: number): number;
+  getDivision(a: number, b: number, ...m: number[]): number;
+  getDivision(a: undefined, b: number): number;
+  getDivision(a: number, b: undefined): number;
+  getDivision(a?: number, b?: number): number;
+  getDivision(a: undefined, b: undefined): number;
+  getDivision(a?: number, b?: number): number {
+    if (a && b) {
+      return a / b;
+    } else if (a === undefined && b) {
+      return b;
+    } else if (b === undefined && a) {
+      return a;
+    } else {
+      return 0;
+    }
+  }
 }
 
 export default Calculator;
