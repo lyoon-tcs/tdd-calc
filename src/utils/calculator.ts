@@ -38,20 +38,22 @@ class Calculator {
     }
   }
 
-  //   getSum(a?: number, b?: number): number {
-  //     if (a !== undefined && b !== undefined) {
-  //       return a + b;
-  //     } else if (a === undefined && b) {
-  //       return b;
-  //     } else if (b === undefined && a) {
-  //       return a;
-  //     } else {
-  //       return 0;
+  // getSum(a?: number, b?: number, ...m: number[]): number {
+  //   if (a !== undefined && b !== undefined) {
+  //     let zero = 0;
+  //     for (let i = 0; i < m.length; i++) {
+  //       zero += m[i];
   //     }
+  //     return a + b + zero;
+  //   } else if (a === undefined && b) {
+  //     return b;
+  //   } else if (b === undefined && a) {
+  //     return a;
+  //   } else {
+  //     return 0;
   //   }
+  // }
 }
-
-export default Calculator;
 
 // getArguments(a: any, b: any) {
 //   if (a === undefined && b === undefined) {
