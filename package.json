@@ -10,7 +10,8 @@
     "test": "jest",
     "lint": "eslint .",
     "lint:fix": "npx eslint --fix",
-    "build": "tsc --noEmitOnError"
+    "build": "tsc --noEmitOnError",
+    "start": "node ./dist/index.js"
   },
   "repository": {
     "type": "git",
