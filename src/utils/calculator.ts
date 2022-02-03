@@ -78,6 +78,12 @@ class Calculator {
     }
   }
 
+  /**
+   * @description takes in two numbers, outputs a number depending on conditions
+   * @param {*} a - number or undefined (empty)
+   * @param {*} b - number or undefined (empty)
+   * @returns {number} - a (number), b (number), a * b (number), or 0 (number)
+   */
   getMultiplication(a: number, b: number): number;
   getMultiplication(a: number, b: number, ...m: number[]): number;
   getMultiplication(a: undefined, b: number): number;
@@ -96,6 +102,12 @@ class Calculator {
     }
   }
 
+  /**
+   * @description takes in two numbers, outputs a number depending on conditions
+   * @param {*} a - number or undefined (empty)
+   * @param {*} b - number or undefined (empty)
+   * @returns {number} - a (number), b (number), a / b (number), or 0 (number)
+   */
   getDivision(a: number, b: number): number;
   getDivision(a: number, b: number, ...m: number[]): number;
   getDivision(a: undefined, b: number): number;
