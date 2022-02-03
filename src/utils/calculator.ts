@@ -55,6 +55,8 @@ class Calculator {
   // }
 }
 
+export default Calculator;
+
 // getArguments(a: any, b: any) {
 //   if (a === undefined && b === undefined) {
 //     return 0;
