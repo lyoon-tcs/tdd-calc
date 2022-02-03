@@ -54,6 +54,12 @@ class Calculator {
   //   }
   // }
 
+  /**
+   * @description takes in two numbers, outputs a number depending on conditions
+   * @param {*} a - number or undefined (empty)
+   * @param {*} b - number or undefined (empty)
+   * @returns {number} - a (number), b (number), a - b (number), or 0 (number)
+   */
   getDifference(a: number, b: number): number;
   getDifference(a: number, b: number, ...m: number[]): number;
   getDifference(a: undefined, b: number): number;
