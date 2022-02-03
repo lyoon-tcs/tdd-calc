@@ -20,7 +20,8 @@ class Calculator {
    * @param {*} b - can be any value
    * @returns {number} a (any number), b (any number), 0, or doesn't return anything
    */
-  getArguments(a, b) {
+
+  getArguments(a: any, b: any) {
     if (a === undefined && b === undefined) {
       return 0;
     }
@@ -38,7 +39,7 @@ class Calculator {
    * @param {*} b - can be any value
    * @returns {boolean} if there is an undefined value, return true. If all's well return false.
    */
-  hasUndefinedArguments(a, b) {
+  hasUndefinedArguments(a: any, b: any): boolean {
     if (a === undefined || b === undefined) {
       return true;
     }
@@ -51,7 +52,7 @@ class Calculator {
    * @param {*} b - can be any value
    * @returns {boolean} returns true if both a & b are numbers, false if not.
    */
-  argumentsAreNumbers(a, b) {
+  argumentsAreNumbers(a: any, b: any) {
     return typeof a === 'number' && typeof b === 'number';
   }
 
@@ -61,7 +62,7 @@ class Calculator {
    * @param {*} b - can be any value
    * @returns {number, boolean} - a number or boolean (true)
    */
-  validate(a, b) {
+  validate(a: any, b: any) {
     if (!this.argumentsAreNumbers(a, b)) {
       if (this.hasUndefinedArguments(a, b)) {
         return this.getArguments(a, b);
