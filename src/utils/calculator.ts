@@ -13,7 +13,6 @@
  * @date 01-20-2022
  */
 class Calculator {
-  // helper functions
   /**
    * @description takes in two numbers, outputs a number depending on conditions
    * @param {*} a - number or undefined (empty)
