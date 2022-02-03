@@ -15,10 +15,10 @@
 class Calculator {
   // helper functions
   /**
-   * @description checks if both arguments are numbers
-   * @param {*} a - can be any value
-   * @param {*} b - can be any value
-   * @returns {number} a (any number), b (any number), 0, or a (operation) b
+   * @description takes in two numbers, outputs a number depending on conditions
+   * @param {*} a - number or undefined (empty)
+   * @param {*} b - number or undefined (empty)
+   * @returns {number} - a (number), b (number), a + b (number), or 0 (number)
    */
   getSum(a: number, b: number): number;
   getSum(a: number, b: number, ...m: number[]): number;
