@@ -29,14 +29,6 @@ describe('Calculator', () => {
     test('should return 0 if no operands are passed', () => {
       expect(calc.getSum()).toBe(0);
     });
-    test('should say error message if type is not a number', () => {
-      expect(() => {
-        calc.getSum(1, 'foo');
-      }).toThrow();
-      expect(() => {
-        calc.getSum('foo', 1);
-      }).toThrow();
-    });
   });
 
   // describe('Subtraction:', () => {
