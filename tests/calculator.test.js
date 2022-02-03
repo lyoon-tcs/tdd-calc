@@ -8,7 +8,7 @@
  */
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const Calculator = require('../calculator');
+const Calculator = require('../src/utils/calculator');
 
 describe('Calculator', () => {
   let calc;
