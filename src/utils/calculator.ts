@@ -18,7 +18,7 @@ class Calculator {
    * @description checks if both arguments are numbers
    * @param {*} a - can be any value
    * @param {*} b - can be any value
-   * @returns {number} a (any number), b (any number), 0, or doesn't return anything
+   * @returns {number} a (any number), b (any number), 0, or a (operation) b
    */
   getSum(a: number, b: number): number;
   getSum(a: undefined, b: number): number;
@@ -26,7 +26,7 @@ class Calculator {
   getSum(a?: number, b?: number): number;
   getSum(a: undefined, b: undefined): number;
   getSum(a?: number, b?: number): number {
-    if (a !== undefined && b !== undefined) {
+    if (a && b) {
       return a + b;
     } else if (a === undefined && b) {
       return b;
@@ -36,6 +36,7 @@ class Calculator {
       return 0;
     }
   }
+
   //   getSum(a?: number, b?: number): number {
   //     if (a !== undefined && b !== undefined) {
   //       return a + b;
