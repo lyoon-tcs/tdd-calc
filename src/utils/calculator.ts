@@ -21,6 +21,7 @@ class Calculator {
    * @returns {number} a (any number), b (any number), 0, or a (operation) b
    */
   getSum(a: number, b: number): number;
+  getSum(a: number, b: number, ...m: number[]): number;
   getSum(a: undefined, b: number): number;
   getSum(a: number, b: undefined): number;
   getSum(a?: number, b?: number): number;
