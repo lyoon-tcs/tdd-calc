@@ -7,11 +7,11 @@
  * use it only in accordance with the terms of the license agreement you entered into with the company.
  */
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const Calculator = require('../src/utils/calculator');
+import Calculator from '../calculator';
+// const Calculator = require('../src/utils/calculator');
 
 describe('Calculator', () => {
-  let calc;
+  let calc: Calculator;
 
   beforeEach(() => {
     calc = new Calculator();
