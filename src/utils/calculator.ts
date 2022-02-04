@@ -37,6 +37,28 @@ class Calculator {
   //   }
   // }
 
+  calculate(
+    // eslint-disable-next-line @typescript-eslint/ban-types
+    operation: Function,
+    a: number | undefined,
+    b: number | undefined
+  ): number {
+    if (a && b) {
+      return operation(a, b);
+    } else if (a === undefined && b) {
+      return b;
+    } else if (b === undefined && a) {
+      return a;
+    } else {
+      return 0;
+    }
+  }
+
+  getSum(a?: number | undefined, b?: number | undefined): number {
+    const addFunction = (a: number, b: number): number => a + b;
+    return this.calculate(addFunction, a, b);
+  }
+
   // getSum(a?: number, b?: number, ...m: number[]): number {
   //   let zero = 0;
   //   for (let i = 0; i < m.length; i++) {
