@@ -13,37 +13,21 @@
  * @date 01-20-2022
  */
 class Calculator {
-  /**
-   * @description takes in two numbers, outputs a number depending on conditions
-   * @param {*} a - number or undefined (empty)
-   * @param {*} b - number or undefined (empty)
-   * @returns {number} - a (number), b (number), a + b (number), or 0 (number)
-   */
-  getSum(a: number, b: number): number;
-  getSum(a: number, b: number, ...m: number[]): number;
-  getSum(a: undefined, b: number): number;
-  getSum(a: number, b: undefined): number;
-  getSum(a?: number, b?: number): number;
-  getSum(a: undefined, b: undefined): number;
-  getSum(a?: number, b?: number): number {
-    if (a && b) {
-      return a + b;
-    } else if (a === undefined && b) {
-      return b;
-    } else if (b === undefined && a) {
-      return a;
-    } else {
-      return 0;
-    }
-  }
-
-  // getSum(a?: number, b?: number, ...m: number[]): number {
-  //   if (a !== undefined && b !== undefined) {
-  //     let zero = 0;
-  //     for (let i = 0; i < m.length; i++) {
-  //       zero += m[i];
-  //     }
-  //     return a + b + zero;
+  // /**
+  //  * @description takes in two numbers, outputs a number depending on conditions
+  //  * @param {number | undefined} a - number or undefined (empty)
+  //  * @param {number | undefined} b - number or undefined (empty)
+  //  * @returns {number} - a (number), b (number), a + b (number), or 0 (number)
+  //  */
+  // getSum(a: number, b: number): number;
+  // getSum(a: number, b: number, ...m: number[]): number;
+  // getSum(a: undefined, b: number): number;
+  // getSum(a: number, b: undefined): number;
+  // getSum(a?: number, b?: number): number;
+  // getSum(a: undefined, b: undefined): number;
+  // getSum(a?: number, b?: number): number {
+  //   if (a && b) {
+  //     return a + b;
   //   } else if (a === undefined && b) {
   //     return b;
   //   } else if (b === undefined && a) {
@@ -53,10 +37,27 @@ class Calculator {
   //   }
   // }
 
+  getSum(a?: number, b?: number, ...m: number[]): number {
+    let zero = 0;
+    for (let i = 0; i < m.length; i++) {
+      m[i] = 0;
+      zero += m[i];
+    }
+    if (a !== undefined && b !== undefined) {
+      return a + b + zero;
+    } else if (a === undefined && b) {
+      return b;
+    } else if (b === undefined && a) {
+      return a;
+    } else {
+      return 0;
+    }
+  }
+
   /**
    * @description takes in two numbers, outputs a number depending on conditions
-   * @param {*} a - number or undefined (empty)
-   * @param {*} b - number or undefined (empty)
+   * @param {number | undefined} a - number or undefined (empty)
+   * @param {number | undefined} b - number or undefined (empty)
    * @returns {number} - a (number), b (number), a - b (number), or 0 (number)
    */
   getDifference(a: number, b: number): number;
@@ -79,8 +80,8 @@ class Calculator {
 
   /**
    * @description takes in two numbers, outputs a number depending on conditions
-   * @param {*} a - number or undefined (empty)
-   * @param {*} b - number or undefined (empty)
+   * @param {number | undefined} a - number or undefined (empty)
+   * @param {number | undefined} b - number or undefined (empty)
    * @returns {number} - a (number), b (number), a * b (number), or 0 (number)
    */
   getMultiplication(a: number, b: number): number;
@@ -103,8 +104,8 @@ class Calculator {
 
   /**
    * @description takes in two numbers, outputs a number depending on conditions
-   * @param {*} a - number or undefined (empty)
-   * @param {*} b - number or undefined (empty)
+   * @param {number | undefined} a - number or undefined (empty)
+   * @param {number | undefined} b - number or undefined (empty)
    * @returns {number} - a (number), b (number), a / b (number), or 0 (number)
    */
   getDivision(a: number, b: number): number;
@@ -125,5 +126,8 @@ class Calculator {
     }
   }
 }
+
+const asdf = new Calculator();
+asdf.getSum(5, 10, 3, 4);
 
 export default Calculator;
