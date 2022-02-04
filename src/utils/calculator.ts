@@ -127,7 +127,4 @@ class Calculator {
   }
 }
 
-const asdf = new Calculator();
-asdf.getSum(5, 10, 3, 4);
-
 export default Calculator;
