@@ -41,9 +41,10 @@ class Calculator {
     // eslint-disable-next-line @typescript-eslint/ban-types
     operation: Function,
     a: number | undefined,
-    b: number | undefined
+    b: number | undefined,
+    extraArgs: number[]
   ): number {
-    if (a && b) {
+    if (a && b && extraArgs.length >= 1) {
       return operation(a, b);
     } else if (a === undefined && b) {
       return b;
@@ -54,9 +55,13 @@ class Calculator {
     }
   }
 
-  getSum(a?: number | undefined, b?: number | undefined): number {
+  getSum(
+    a?: number | undefined,
+    b?: number | undefined,
+    ...extraArgs: number[]
+  ): number {
     const addFunction = (a: number, b: number): number => a + b;
-    return this.calculate(addFunction, a, b);
+    return this.calculate(addFunction, a, b, extraArgs);
   }
 
   // getSum(a?: number, b?: number, ...m: number[]): number {
