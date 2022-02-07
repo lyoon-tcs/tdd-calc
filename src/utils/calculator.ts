@@ -13,12 +13,13 @@
  * @date 01-20-2022
  */
 class Calculator {
-  // /**
-  //  * @description takes in two numbers, outputs a number depending on conditions
-  //  * @param {number | undefined} a - number or undefined (empty)
-  //  * @param {number | undefined} b - number or undefined (empty)
-  //  * @returns {number} - a (number), b (number), a + b (number), or 0 (number)
-  //  */
+  /**
+   * @description takes 3 parameters and returns a number based on conditionals.
+   * @param {number | undefined} a - number or undefined (empty)
+   * @param {number | undefined} b - number or undefined (empty)
+   * @param {Array} extraArgs - extra arguments after a & b grouped inside an array
+   * @returns {number} - numbers: a, b, a (+, -, *, /) b, 0
+   */
   calculate(
     operation: (a: number, b: number) => number,
     a: number | undefined,
@@ -37,6 +38,13 @@ class Calculator {
     }
   }
 
+  /**
+   * @description returns a number from the calculate function
+   * @param {number | undefined} a - number or undefined (empty)
+   * @param {number | undefined} b - number or undefined (empty)
+   * @param {Array} extraArgs - extra arguments after a & b grouped inside an array
+   * @returns {number} - sum of two numbers
+   */
   getSum(a?: number, b?: number, ...extraArgs: number[]): number {
     const addFunction = (a: number, b: number): number => a + b;
     return this.calculate(addFunction, a, b, extraArgs);
