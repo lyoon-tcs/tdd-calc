@@ -39,7 +39,7 @@ class Calculator {
   }
 
   /**
-   * @description returns a number from the calculate function
+   * @description returns sum, using calculate function
    * @param {number | undefined} a - number or undefined (empty)
    * @param {number | undefined} b - number or undefined (empty)
    * @param {Array} extraArgs - extra arguments after a & b, grouped inside an array
@@ -51,7 +51,7 @@ class Calculator {
   }
 
   /**
-   * @description returns a number from the calculate function
+   * @description returns difference, using calculate function
    * @param {number | undefined} a - number or undefined (empty)
    * @param {number | undefined} b - number or undefined (empty)
    * @params {Array} extraArgs - extra arguments after a & b, grouped inside an array
