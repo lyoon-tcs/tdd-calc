@@ -56,22 +56,9 @@ class Calculator {
    * @param {number | undefined} b - number or undefined (empty)
    * @returns {number} - a (number), b (number), a - b (number), or 0 (number)
    */
-  getDifference(a: number, b: number): number;
-  getDifference(a: number, b: number, ...m: number[]): number;
-  getDifference(a: undefined, b: number): number;
-  getDifference(a: number, b: undefined): number;
-  getDifference(a?: number, b?: number): number;
-  getDifference(a: undefined, b: undefined): number;
-  getDifference(a?: number, b?: number): number {
-    if (a && b) {
-      return a - b;
-    } else if (a === undefined && b) {
-      return b;
-    } else if (b === undefined && a) {
-      return a;
-    } else {
-      return 0;
-    }
+  getDifference(a?: number, b?: number, ...extraArgs: number[]): number {
+    const subtractFunction = (a: number, b: number): number => a - b;
+    return this.calculate(subtractFunction, a, b, extraArgs);
   }
 
   /**
