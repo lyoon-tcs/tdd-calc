@@ -54,8 +54,8 @@ class Calculator {
    * @description returns difference, using calculate function
    * @param {number | undefined} a - number or undefined (empty)
    * @param {number | undefined} b - number or undefined (empty)
-   * @params {Array} extraArgs - extra arguments after a & b, grouped inside an array
-   * @returns {Array} - difference of two numbers
+   * @param {Array} extraArgs - extra arguments after a & b, grouped inside an array
+   * @returns {number} - difference of two numbers
    */
   getDifference(a?: number, b?: number, ...extraArgs: number[]): number {
     const subtractFunction = (a: number, b: number): number => a - b;
@@ -63,10 +63,11 @@ class Calculator {
   }
 
   /**
-   * @description takes in two numbers, outputs a number depending on conditions
+   * @description returns multiplication, using calculate function
    * @param {number | undefined} a - number or undefined (empty)
    * @param {number | undefined} b - number or undefined (empty)
-   * @returns {number} - a (number), b (number), a * b (number), or 0 (number)
+   * @param {Array} extraArgs - extra arguments after a & b, grouped inside an array
+   * @returns {number} - multiplication of two numbers
    */
   getMultiplication(a?: number, b?: number, ...extraArgs: number[]): number {
     const multiplyFunction = (a: number, b: number): number => a * b;
