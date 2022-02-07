@@ -37,11 +37,7 @@ class Calculator {
     }
   }
 
-  getSum(
-    a?: number | undefined,
-    b?: number | undefined,
-    ...extraArgs: number[]
-  ): number {
+  getSum(a?: number, b?: number, ...extraArgs: number[]): number {
     const addFunction = (a: number, b: number): number => a + b;
     return this.calculate(addFunction, a, b, extraArgs);
   }
