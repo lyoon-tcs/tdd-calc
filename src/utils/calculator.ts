@@ -20,15 +20,15 @@ class Calculator {
   //  * @returns {number} - a (number), b (number), a + b (number), or 0 (number)
   //  */
   calculate(
-    // eslint-disable-next-line @typescript-eslint/ban-types
-    operation: Function,
+    operation: (a: number, b: number) => number,
     a: number | undefined,
     b: number | undefined,
     extraArgs: number[]
   ): number {
-    if ((a && b) || extraArgs.length >= 1) {
+    if (a && b && extraArgs) {
       return operation(a, b);
-    } else if (a === undefined && b) {
+    }
+    if (a === undefined && b) {
       return b;
     } else if (b === undefined && a) {
       return a;
