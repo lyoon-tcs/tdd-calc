@@ -80,22 +80,9 @@ class Calculator {
    * @param {number | undefined} b - number or undefined (empty)
    * @returns {number} - a (number), b (number), a / b (number), or 0 (number)
    */
-  getDivision(a: number, b: number): number;
-  getDivision(a: number, b: number, ...m: number[]): number;
-  getDivision(a: undefined, b: number): number;
-  getDivision(a: number, b: undefined): number;
-  getDivision(a?: number, b?: number): number;
-  getDivision(a: undefined, b: undefined): number;
-  getDivision(a?: number, b?: number): number {
-    if (a && b) {
-      return a / b;
-    } else if (a === undefined && b) {
-      return b;
-    } else if (b === undefined && a) {
-      return a;
-    } else {
-      return 0;
-    }
+  getDivision(a?: number, b?: number, ...extraArgs: number[]): number {
+    const divideFunction = (a: number, b: number): number => a / b;
+    return this.calculate(divideFunction, a, b, extraArgs);
   }
 }
 
