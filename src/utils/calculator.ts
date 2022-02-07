@@ -39,7 +39,7 @@ class Calculator {
   }
 
   /**
-   * @description returns sum, using calculate function
+   * @description sum of two numbers, using calculate function
    * @param {number | undefined} a - number or undefined (empty)
    * @param {number | undefined} b - number or undefined (empty)
    * @param {Array} extraArgs - extra arguments after a & b, grouped inside an array
@@ -51,7 +51,7 @@ class Calculator {
   }
 
   /**
-   * @description returns difference, using calculate function
+   * @description difference of two numbers, using calculate function
    * @param {number | undefined} a - number or undefined (empty)
    * @param {number | undefined} b - number or undefined (empty)
    * @param {Array} extraArgs - extra arguments after a & b, grouped inside an array
@@ -63,7 +63,7 @@ class Calculator {
   }
 
   /**
-   * @description returns multiplication, using calculate function
+   * @description multiplication of two numbers, using calculate function
    * @param {number | undefined} a - number or undefined (empty)
    * @param {number | undefined} b - number or undefined (empty)
    * @param {Array} extraArgs - extra arguments after a & b, grouped inside an array
@@ -75,10 +75,11 @@ class Calculator {
   }
 
   /**
-   * @description takes in two numbers, outputs a number depending on conditions
+   * @description division of two numbers, using calculate function
    * @param {number | undefined} a - number or undefined (empty)
    * @param {number | undefined} b - number or undefined (empty)
-   * @returns {number} - a (number), b (number), a / b (number), or 0 (number)
+   * @param {Array} extraArgs - extra arguments after a & b, grouped inside an array
+   * @returns {number} - division of two numbers
    */
   getDivision(a?: number, b?: number, ...extraArgs: number[]): number {
     const divideFunction = (a: number, b: number): number => a / b;
