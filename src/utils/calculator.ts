@@ -64,23 +64,6 @@ class Calculator {
     return this.calculate(addFunction, a, b, extraArgs);
   }
 
-  // getSum(a?: number, b?: number, ...m: number[]): number {
-  //   let zero = 0;
-  //   for (let i = 0; i < m.length; i++) {
-  //     m[i] = 0;
-  //     zero += m[i];
-  //   }
-  //   if (a !== undefined && b !== undefined) {
-  //     return a + b + zero;
-  //   } else if (a === undefined && b) {
-  //     return b;
-  //   } else if (b === undefined && a) {
-  //     return a;
-  //   } else {
-  //     return 0;
-  //   }
-  // }
-
   /**
    * @description takes in two numbers, outputs a number depending on conditions
    * @param {number | undefined} a - number or undefined (empty)
