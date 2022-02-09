@@ -18,7 +18,7 @@ class Calculator {
    * @param {number | undefined} a - number or undefined (empty)
    * @param {number | undefined} b - number or undefined (empty)
    * @param {Array} extraArgs - extra arguments after a & b grouped inside an array
-   * @returns {number} - numbers: a, b, a (+, -, *, /) b, 0
+   * @returns {number} - numbers: a, b, a (+, -, *, /) b, or 0
    */
   calculate(
     operation: (a: number, b: number) => number,
